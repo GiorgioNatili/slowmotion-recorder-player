@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		592544B61CA5C65000C88B75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544B51CA5C65000C88B75 /* main.m */; };
+		592544B91CA5C65000C88B75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544B81CA5C65000C88B75 /* AppDelegate.m */; };
+		592544BC1CA5C65000C88B75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544BB1CA5C65000C88B75 /* ViewController.m */; };
+		592544BF1CA5C65000C88B75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592544BD1CA5C65000C88B75 /* Main.storyboard */; };
+		592544C21CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 592544C01CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld */; };
+		592544C41CA5C65000C88B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 592544C31CA5C65000C88B75 /* Assets.xcassets */; };
+		592544C71CA5C65000C88B75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592544C51CA5C65000C88B75 /* LaunchScreen.storyboard */; };
+		592544D21CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544D11CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m */; };
+		592544DD1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544DC1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		592544CE1CA5C65000C88B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592544A91CA5C65000C88B75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592544B01CA5C65000C88B75;
+			remoteInfo = SlowMotionVideoPlayer;
+		};
+		592544D91CA5C65000C88B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 592544A91CA5C65000C88B75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592544B01CA5C65000C88B75;
+			remoteInfo = SlowMotionVideoPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		592544B11CA5C65000C88B75 /* SlowMotionVideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlowMotionVideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		592544B51CA5C65000C88B75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		592544B71CA5C65000C88B75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		592544B81CA5C65000C88B75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		592544BA1CA5C65000C88B75 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		592544BB1CA5C65000C88B75 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		592544BE1CA5C65000C88B75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		592544C11CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SlowMotionVideoPlayer.xcdatamodel; sourceTree = "<group>"; };
+		592544C31CA5C65000C88B75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		592544C61CA5C65000C88B75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		592544C81CA5C65000C88B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		592544CD1CA5C65000C88B75 /* SlowMotionVideoPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowMotionVideoPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		592544D11CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlowMotionVideoPlayerTests.m; sourceTree = "<group>"; };
+		592544D31CA5C65000C88B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		592544D81CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowMotionVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		592544DC1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlowMotionVideoPlayerUITests.m; sourceTree = "<group>"; };
+		592544DE1CA5C65000C88B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		592544AE1CA5C65000C88B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544CA1CA5C65000C88B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544D51CA5C65000C88B75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		592544A81CA5C65000C88B75 = {
+			isa = PBXGroup;
+			children = (
+				592544B31CA5C65000C88B75 /* SlowMotionVideoPlayer */,
+				592544D01CA5C65000C88B75 /* SlowMotionVideoPlayerTests */,
+				592544DB1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests */,
+				592544B21CA5C65000C88B75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		592544B21CA5C65000C88B75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				592544B11CA5C65000C88B75 /* SlowMotionVideoPlayer.app */,
+				592544CD1CA5C65000C88B75 /* SlowMotionVideoPlayerTests.xctest */,
+				592544D81CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		592544B31CA5C65000C88B75 /* SlowMotionVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				592544B71CA5C65000C88B75 /* AppDelegate.h */,
+				592544B81CA5C65000C88B75 /* AppDelegate.m */,
+				592544BA1CA5C65000C88B75 /* ViewController.h */,
+				592544BB1CA5C65000C88B75 /* ViewController.m */,
+				592544BD1CA5C65000C88B75 /* Main.storyboard */,
+				592544C31CA5C65000C88B75 /* Assets.xcassets */,
+				592544C51CA5C65000C88B75 /* LaunchScreen.storyboard */,
+				592544C81CA5C65000C88B75 /* Info.plist */,
+				592544C01CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld */,
+				592544B41CA5C65000C88B75 /* Supporting Files */,
+			);
+			path = SlowMotionVideoPlayer;
+			sourceTree = "<group>";
+		};
+		592544B41CA5C65000C88B75 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				592544B51CA5C65000C88B75 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		592544D01CA5C65000C88B75 /* SlowMotionVideoPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				592544D11CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m */,
+				592544D31CA5C65000C88B75 /* Info.plist */,
+			);
+			path = SlowMotionVideoPlayerTests;
+			sourceTree = "<group>";
+		};
+		592544DB1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				592544DC1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m */,
+				592544DE1CA5C65000C88B75 /* Info.plist */,
+			);
+			path = SlowMotionVideoPlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592544B01CA5C65000C88B75 /* SlowMotionVideoPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592544E11CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayer" */;
+			buildPhases = (
+				592544AD1CA5C65000C88B75 /* Sources */,
+				592544AE1CA5C65000C88B75 /* Frameworks */,
+				592544AF1CA5C65000C88B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlowMotionVideoPlayer;
+			productName = SlowMotionVideoPlayer;
+			productReference = 592544B11CA5C65000C88B75 /* SlowMotionVideoPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		592544CC1CA5C65000C88B75 /* SlowMotionVideoPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592544E41CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayerTests" */;
+			buildPhases = (
+				592544C91CA5C65000C88B75 /* Sources */,
+				592544CA1CA5C65000C88B75 /* Frameworks */,
+				592544CB1CA5C65000C88B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592544CF1CA5C65000C88B75 /* PBXTargetDependency */,
+			);
+			name = SlowMotionVideoPlayerTests;
+			productName = SlowMotionVideoPlayerTests;
+			productReference = 592544CD1CA5C65000C88B75 /* SlowMotionVideoPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		592544D71CA5C65000C88B75 /* SlowMotionVideoPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 592544E71CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayerUITests" */;
+			buildPhases = (
+				592544D41CA5C65000C88B75 /* Sources */,
+				592544D51CA5C65000C88B75 /* Frameworks */,
+				592544D61CA5C65000C88B75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				592544DA1CA5C65000C88B75 /* PBXTargetDependency */,
+			);
+			name = SlowMotionVideoPlayerUITests;
+			productName = SlowMotionVideoPlayerUITests;
+			productReference = 592544D81CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		592544A91CA5C65000C88B75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Natili, Giorgio";
+				TargetAttributes = {
+					592544B01CA5C65000C88B75 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					592544CC1CA5C65000C88B75 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 592544B01CA5C65000C88B75;
+					};
+					592544D71CA5C65000C88B75 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 592544B01CA5C65000C88B75;
+					};
+				};
+			};
+			buildConfigurationList = 592544AC1CA5C65000C88B75 /* Build configuration list for PBXProject "SlowMotionVideoPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 592544A81CA5C65000C88B75;
+			productRefGroup = 592544B21CA5C65000C88B75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				592544B01CA5C65000C88B75 /* SlowMotionVideoPlayer */,
+				592544CC1CA5C65000C88B75 /* SlowMotionVideoPlayerTests */,
+				592544D71CA5C65000C88B75 /* SlowMotionVideoPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		592544AF1CA5C65000C88B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592544C71CA5C65000C88B75 /* LaunchScreen.storyboard in Resources */,
+				592544C41CA5C65000C88B75 /* Assets.xcassets in Resources */,
+				592544BF1CA5C65000C88B75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544CB1CA5C65000C88B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544D61CA5C65000C88B75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		592544AD1CA5C65000C88B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592544BC1CA5C65000C88B75 /* ViewController.m in Sources */,
+				592544C21CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld in Sources */,
+				592544B91CA5C65000C88B75 /* AppDelegate.m in Sources */,
+				592544B61CA5C65000C88B75 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544C91CA5C65000C88B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592544D21CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		592544D41CA5C65000C88B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				592544DD1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		592544CF1CA5C65000C88B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592544B01CA5C65000C88B75 /* SlowMotionVideoPlayer */;
+			targetProxy = 592544CE1CA5C65000C88B75 /* PBXContainerItemProxy */;
+		};
+		592544DA1CA5C65000C88B75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592544B01CA5C65000C88B75 /* SlowMotionVideoPlayer */;
+			targetProxy = 592544D91CA5C65000C88B75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		592544BD1CA5C65000C88B75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592544BE1CA5C65000C88B75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		592544C51CA5C65000C88B75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				592544C61CA5C65000C88B75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		592544DF1CA5C65000C88B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		592544E01CA5C65000C88B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		592544E21CA5C65000C88B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SlowMotionVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		592544E31CA5C65000C88B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SlowMotionVideoPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		592544E51CA5C65000C88B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SlowMotionVideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlowMotionVideoPlayer.app/SlowMotionVideoPlayer";
+			};
+			name = Debug;
+		};
+		592544E61CA5C65000C88B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SlowMotionVideoPlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlowMotionVideoPlayer.app/SlowMotionVideoPlayer";
+			};
+			name = Release;
+		};
+		592544E81CA5C65000C88B75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SlowMotionVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SlowMotionVideoPlayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		592544E91CA5C65000C88B75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SlowMotionVideoPlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = io.webplatform.ga.SlowMotionVideoPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SlowMotionVideoPlayer;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		592544AC1CA5C65000C88B75 /* Build configuration list for PBXProject "SlowMotionVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592544DF1CA5C65000C88B75 /* Debug */,
+				592544E01CA5C65000C88B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		592544E11CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592544E21CA5C65000C88B75 /* Debug */,
+				592544E31CA5C65000C88B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		592544E41CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592544E51CA5C65000C88B75 /* Debug */,
+				592544E61CA5C65000C88B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		592544E71CA5C65000C88B75 /* Build configuration list for PBXNativeTarget "SlowMotionVideoPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				592544E81CA5C65000C88B75 /* Debug */,
+				592544E91CA5C65000C88B75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		592544C01CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				592544C11CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodel */,
+			);
+			currentVersion = 592544C11CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodel */;
+			path = SlowMotionVideoPlayer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 592544A91CA5C65000C88B75 /* Project object */;
+}
