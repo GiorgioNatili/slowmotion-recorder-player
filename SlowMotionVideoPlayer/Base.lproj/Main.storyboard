@@ -102,8 +102,27 @@
                     <view key="view" contentMode="scaleToFill" id="GnR-F9-9Go">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h8f-at-4Af">
+                                <rect key="frame" x="211" y="33" width="179" height="29"/>
+                                <segments>
+                                    <segment title="Slow Motion"/>
+                                    <segment title="Normal"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleSpeed:" destination="zTp-jS-gdL" eventType="valueChanged" id="ZHi-MQ-vpg"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h8f-at-4Af" firstAttribute="top" secondItem="ROT-aF-Qnd" secondAttribute="bottom" constant="13" id="9ty-hP-XGu"/>
+                            <constraint firstItem="h8f-at-4Af" firstAttribute="centerX" secondItem="GnR-F9-9Go" secondAttribute="centerX" id="tKu-Lb-J03"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="motionToggler" destination="h8f-at-4Af" id="OjD-eP-t5c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yG0-vl-VmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

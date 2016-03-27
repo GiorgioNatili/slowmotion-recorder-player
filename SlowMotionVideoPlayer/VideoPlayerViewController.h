@@ -13,5 +13,8 @@
 @property(nonatomic)NSString *currentFileName;
 @property (nonatomic, assign, getter=isSlowmotion) BOOL slowMotion;
 @property(nonatomic)NSURL *currentOutputURL;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *motionToggler;
+
+- (void)switchToSlowMotion:(Boolean)status;
 
 @end

@@ -11,7 +11,7 @@
 @import AVKit;
 
 @interface VideoPlayerViewController ()
-
+@property(nonatomic)AVPlayer *player;
 @end
 
 @implementation VideoPlayerViewController
@@ -20,6 +20,8 @@
 @synthesize slowMotion = _slowMotion;
 @synthesize currentOutputURL = _currentOutputURL;
 
+
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
@@ -27,16 +29,16 @@
     // Populate the UI
     
     // Create an AVPlayer
-    AVPlayer *player = [AVPlayer playerWithURL:self.currentOutputURL];
+    self.player = [AVPlayer playerWithURL:self.currentOutputURL];
     
     // create a player view controller
     AVPlayerViewController *controller = [[AVPlayerViewController alloc]init];
-    controller.player = player;
-    [player play];
+    controller.player = self.player;
+    [self.player play];
     
     if(self.slowMotion == true) {
         
-       // player.rate = 0.5;
+       self.player.rate = 0.5;
     }
     
     // show the view controller
@@ -44,12 +46,40 @@
     [self.view addSubview:controller.view];
     
     controller.view.frame = self.view.frame;
+    
+    [self.view bringSubviewToFront:self.motionToggler];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)toggleSpeed:(UISegmentedControl *)sender {
+    
+    if (sender.selectedSegmentIndex == 0) {
+        
+        [self switchToSlowMotion:true];
+    
+    } else {
+        
+        [self switchToSlowMotion:false];
+    }
+    
+}
+
+- (void)switchToSlowMotion:(Boolean)status {
+    
+    if(status == true) {
+        
+        self.player.rate = 0.5;
+        
+    } else {
+        
+        self.player.rate = 1.0;
+    }
+}
+
 
 /*
  #pragma mark - Navigation
