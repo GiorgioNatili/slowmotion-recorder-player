@@ -14,4 +14,5 @@
 - (void)setFlashMode:(AVCaptureFlashMode)flashMode forDevice:(AVCaptureDevice *)device;
 - (AVCaptureDevice *)deviceWithMediaType:(NSString *)mediaType preferringPosition:(AVCaptureDevicePosition)position;
 - (NSURL *)localFileURL:(NSString *)withFileName;
+- (void)switchSession:(AVCaptureSession *)captureSession toDesiredFPS:(CGFloat)desiredFPS;
 @end

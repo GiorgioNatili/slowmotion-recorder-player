@@ -241,6 +241,8 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
         
         if ( !self.movieFileOutput.isRecording ) {
             
+            [self.videoUtils switchSession:self.session toDesiredFPS:60.0];
+            
             // Update the orientation on the movie file output video connection before starting recording.
             AVCaptureConnection *connection = [self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
             
