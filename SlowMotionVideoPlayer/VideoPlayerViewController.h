@@ -6,8 +6,12 @@
 //  Copyright © 2016 Natili, Giorgio. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface VideoPlayerViewController : NSObject
+@interface VideoPlayerViewController : UIViewController
+
+@property(nonatomic)NSString *currentFileName;
+@property (nonatomic, assign, getter=isSlowmotion) BOOL slowMotion;
+@property(nonatomic)NSURL *currentOutputURL;
 
 @end

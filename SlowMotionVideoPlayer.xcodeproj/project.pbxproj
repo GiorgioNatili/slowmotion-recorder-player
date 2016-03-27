@@ -16,6 +16,9 @@
 		592544C71CA5C65000C88B75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592544C51CA5C65000C88B75 /* LaunchScreen.storyboard */; };
 		592544D21CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544D11CA5C65000C88B75 /* SlowMotionVideoPlayerTests.m */; };
 		592544DD1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544DC1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m */; };
+		592544EE1CA5D30A00C88B75 /* RecordingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544ED1CA5D30A00C88B75 /* RecordingViewController.m */; };
+		592544F11CA7086D00C88B75 /* VideoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544F01CA7086D00C88B75 /* VideoUtils.m */; };
+		592544F71CA7602900C88B75 /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544F61CA7602900C88B75 /* VideoPlayerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,12 @@
 		592544D81CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlowMotionVideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		592544DC1CA5C65000C88B75 /* SlowMotionVideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlowMotionVideoPlayerUITests.m; sourceTree = "<group>"; };
 		592544DE1CA5C65000C88B75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		592544EC1CA5D30A00C88B75 /* RecordingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecordingViewController.h; sourceTree = "<group>"; };
+		592544ED1CA5D30A00C88B75 /* RecordingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecordingViewController.m; sourceTree = "<group>"; };
+		592544EF1CA7086D00C88B75 /* VideoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUtils.h; sourceTree = "<group>"; };
+		592544F01CA7086D00C88B75 /* VideoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoUtils.m; sourceTree = "<group>"; };
+		592544F51CA7602900C88B75 /* VideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerViewController.h; sourceTree = "<group>"; };
+		592544F61CA7602900C88B75 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,11 +117,17 @@
 				592544BA1CA5C65000C88B75 /* ViewController.h */,
 				592544BB1CA5C65000C88B75 /* ViewController.m */,
 				592544BD1CA5C65000C88B75 /* Main.storyboard */,
+				592544EC1CA5D30A00C88B75 /* RecordingViewController.h */,
+				592544ED1CA5D30A00C88B75 /* RecordingViewController.m */,
 				592544C31CA5C65000C88B75 /* Assets.xcassets */,
 				592544C51CA5C65000C88B75 /* LaunchScreen.storyboard */,
 				592544C81CA5C65000C88B75 /* Info.plist */,
 				592544C01CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld */,
 				592544B41CA5C65000C88B75 /* Supporting Files */,
+				592544EF1CA7086D00C88B75 /* VideoUtils.h */,
+				592544F01CA7086D00C88B75 /* VideoUtils.m */,
+				592544F51CA7602900C88B75 /* VideoPlayerViewController.h */,
+				592544F61CA7602900C88B75 /* VideoPlayerViewController.m */,
 			);
 			path = SlowMotionVideoPlayer;
 			sourceTree = "<group>";
@@ -273,10 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				592544F71CA7602900C88B75 /* VideoPlayerViewController.m in Sources */,
 				592544BC1CA5C65000C88B75 /* ViewController.m in Sources */,
+				592544EE1CA5D30A00C88B75 /* RecordingViewController.m in Sources */,
 				592544C21CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld in Sources */,
 				592544B91CA5C65000C88B75 /* AppDelegate.m in Sources */,
 				592544B61CA5C65000C88B75 /* main.m in Sources */,
+				592544F11CA7086D00C88B75 /* VideoUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
