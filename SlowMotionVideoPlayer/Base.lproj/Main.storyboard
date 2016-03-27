@@ -65,14 +65,25 @@
                                     <action selector="recordVideo:" destination="igJ-Na-20c" eventType="touchUpInside" id="kxx-Fz-8cj"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zu4-dn-oFj">
+                                <rect key="frame" x="200" y="514" width="200" height="29"/>
+                                <segments>
+                                    <segment title="Normal"/>
+                                    <segment title="60 FPS"/>
+                                    <segment title="240 FPS"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Zu4-dn-oFj" firstAttribute="centerX" secondItem="Kmj-GX-aXr" secondAttribute="centerX" id="FXi-0c-U6Q"/>
                             <constraint firstItem="gfM-Mr-lJb" firstAttribute="top" secondItem="Xpy-2b-jvb" secondAttribute="bottom" constant="20" id="TeO-Kt-iOx"/>
                             <constraint firstItem="Xpy-2b-jvb" firstAttribute="centerX" secondItem="Kmj-GX-aXr" secondAttribute="centerX" id="nVu-15-Ba4"/>
+                            <constraint firstItem="Xpy-2b-jvb" firstAttribute="top" secondItem="Zu4-dn-oFj" secondAttribute="bottom" constant="8" id="trZ-xl-QkG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="frameRate" destination="Zu4-dn-oFj" id="MPd-FN-Jfz"/>
                         <outlet property="record" destination="Xpy-2b-jvb" id="iSE-fm-Ubi"/>
                     </connections>
                 </viewController>
@@ -96,23 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yG0-vl-VmV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="707" y="908"/>
-        </scene>
-        <!--AV Player View Controller-->
-        <scene sceneID="9RM-d2-9jA">
-            <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="QhA-NK-y7L" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sgg-Zp-NrK">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                </avPlayerViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m6B-Xh-Y0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1348" y="1028"/>
+            <point key="canvasLocation" x="1047" y="1003"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SQ7-hf-FvF">

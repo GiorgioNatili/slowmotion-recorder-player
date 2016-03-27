@@ -36,7 +36,7 @@
     
     if(self.slowMotion == true) {
         
-        player.rate = 0.5;
+       // player.rate = 0.5;
     }
     
     // show the view controller

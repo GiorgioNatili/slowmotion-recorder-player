@@ -40,6 +40,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 
 // UI items
 @property (weak, nonatomic) IBOutlet UIButton *record;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *frameRate;
 
 @end
 
@@ -163,10 +164,12 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
             AVCaptureConnection *connection = [movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
             
             if ( connection.isVideoStabilizationSupported ) {
+                
                 connection.preferredVideoStabilizationMode = AVCaptureVideoStabilizationModeAuto;
             }
             
             self.movieFileOutput = movieFileOutput;
+            
         } else {
             
             NSLog( @"Could not add movie file output to the session" );
@@ -230,6 +233,26 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
 }
 
+#pragma mark - Private
+- (void) handleFPS {
+    
+    NSInteger selectedIndex = self.frameRate.selectedSegmentIndex;
+    
+    if (selectedIndex == 0) {
+        
+        [self.videoUtils switchSession:self.session toDesiredFPS:30.0];
+        
+    } else if (selectedIndex == 1) {
+        
+        [self.videoUtils switchSession:self.session toDesiredFPS:60.0];
+    
+    } else if( selectedIndex == 2) {
+        
+        [self.videoUtils switchSession:self.session toDesiredFPS:240.0];
+    }
+
+    
+}
 
 #pragma mark - User Interactions
 - (IBAction)recordVideo:(id)sender {
@@ -237,11 +260,11 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     UIButton *button = (UIButton*) sender;
     button.enabled = NO;
     
+    [self handleFPS];
+    
     dispatch_async( self.sessionQueue, ^{
         
         if ( !self.movieFileOutput.isRecording ) {
-            
-            [self.videoUtils switchSession:self.session toDesiredFPS:60.0];
             
             // Update the orientation on the movie file output video connection before starting recording.
             AVCaptureConnection *connection = [self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];

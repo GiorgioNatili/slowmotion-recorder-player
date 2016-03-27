@@ -89,6 +89,7 @@
             NSLog(@"selected format:%@", selectedFormat);
             
             videoDevice.activeFormat = selectedFormat;
+            
             videoDevice.activeVideoMinFrameDuration = CMTimeMake(1, (int32_t)desiredFPS);
             videoDevice.activeVideoMaxFrameDuration = CMTimeMake(1, (int32_t)desiredFPS);
             
@@ -100,6 +101,37 @@
     
 }
 
+- (void)scaleTimeRange:(CMTimeRange)timeRange toDuration:(CMTime)duration{
+
+    AVURLAsset* videoAsset = nil; //self.inputAsset;
+    
+    //create mutable composition
+    AVMutableComposition *mixComposition = [AVMutableComposition composition];
+    
+    AVMutableCompositionTrack *compositionVideoTrack = [mixComposition addMutableTrackWithMediaType:AVMediaTypeVideo
+                                                                                   preferredTrackID:kCMPersistentTrackID_Invalid];
+    NSError *videoInsertError = nil;
+    BOOL videoInsertResult = [compositionVideoTrack insertTimeRange:CMTimeRangeMake(kCMTimeZero, videoAsset.duration)
+                                                            ofTrack:[[videoAsset tracksWithMediaType:AVMediaTypeVideo] objectAtIndex:0]
+                                                             atTime:kCMTimeZero
+                                                              error:&videoInsertError];
+    if (!videoInsertResult || nil != videoInsertError) {
+        //handle error
+        return;
+    }
+    
+    //slow down whole video by 2.0
+    double videoScaleFactor = 2.0;
+    CMTime videoDuration = videoAsset.duration;
+    
+    [compositionVideoTrack scaleTimeRange:CMTimeRangeMake(kCMTimeZero, videoDuration)
+                               toDuration:CMTimeMake(videoDuration.value*videoScaleFactor, videoDuration.timescale)];
+    
+    //export
+    AVAssetExportSession* assetExport = [[AVAssetExportSession alloc] initWithAsset:mixComposition
+                                                                         presetName:AVAssetExportPresetLowQuality];
+    
+}
 
 
 @end
