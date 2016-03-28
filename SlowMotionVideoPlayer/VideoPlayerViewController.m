@@ -20,14 +20,10 @@
 @synthesize slowMotion = _slowMotion;
 @synthesize currentOutputURL = _currentOutputURL;
 
-
-
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    // Populate the UI
-    
+        
     // Create an AVPlayer
     self.player = [AVPlayer playerWithURL:self.currentOutputURL];
     
@@ -55,6 +51,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - User Interaction
 - (IBAction)toggleSpeed:(UISegmentedControl *)sender {
     
     if (sender.selectedSegmentIndex == 0) {
