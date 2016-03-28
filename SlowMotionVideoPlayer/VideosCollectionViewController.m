@@ -8,7 +8,9 @@
 
 #import "VideosCollectionViewController.h"
 #import "DataManager.h"
+#import "VideoUtils.h"
 #import "VideoViewCell.h"
+#import "VideoPlayerViewController.h"
 
 @interface VideosCollectionViewController ()
 
@@ -98,17 +100,26 @@ static NSString * const reuseIdentifier = @"Cell";
     return cell;
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     Video *video = [self.videos objectAtIndex:indexPath.item];
     if (video) {
-//        NSString* documentsDirectory = [VideoCollectionViewController applicationDocumentsDirectory];
-//        NSString* filePath = [documentsDirectory stringByAppendingString:video.filePath];
-//        NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
-//        NSLog(@"Current URL:%@, pay attention to the APP_ID", fileUrl);
-//        
-//        [self startPlaybackForItemWithURL:fileUrl];
+        
+        VideoUtils *videoUtils  = [[VideoUtils alloc] init];
+        NSURL *fileURL          = [videoUtils localFileURL:video.name];
+        NSString *fileName      = [fileURL absoluteString];
+ 
+        NSString * storyboardName = @"Main";
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+        
+        VideoPlayerViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"VideoPlayerViewController"];
+        
+        vc.currentFileName  = fileName;
+        vc.slowMotion       = true;
+        vc.currentOutputURL = fileURL;
+        
+        [self presentViewController:vc animated:YES completion:nil];
+    
     }
     
 }
