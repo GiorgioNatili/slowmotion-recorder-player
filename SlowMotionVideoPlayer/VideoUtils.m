@@ -101,6 +101,24 @@
     
 }
 
+- (float) getFrameRateFromAVPlayer:(AVPlayer *) player {
+    
+    float fps = 0.00;
+    
+    if (player.currentItem.asset) {
+        
+        AVAssetTrack *assetTrack = [player.currentItem.tracks[0] assetTrack];
+        
+        if(assetTrack) {
+            
+            fps = [assetTrack nominalFrameRate];
+        }
+        
+    }
+    
+    return fps;
+}
+
 - (void)scaleTimeRange:(CMTimeRange)timeRange toDuration:(CMTime)duration{
 
     AVURLAsset* videoAsset = nil; //self.inputAsset;

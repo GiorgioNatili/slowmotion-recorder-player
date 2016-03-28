@@ -7,8 +7,13 @@
 //
 
 #import "VideosCollectionViewController.h"
+#import "DataManager.h"
+#import "VideoViewCell.h"
 
 @interface VideosCollectionViewController ()
+
+@property (assign, nonatomic) CGSize cellSize;
+@property (strong, nonatomic) NSArray *videos;
 
 @end
 
@@ -19,6 +24,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UICollectionViewFlowLayout* flowLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.minimumLineSpacing = 0;
+    
+    CGFloat size = self.view.frame.size.width / 2.f;
+    self.cellSize = CGSizeMake(size, size);
+    [flowLayout setItemSize:self.cellSize];
+
+    
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -26,6 +40,14 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    [self fetchVideosFromDatabase];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,22 +68,49 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    
+    return 1;
+    
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.videos.count;
+    
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 0;
+- (void)fetchVideosFromDatabase {
+    
+    DataManager *dataManager = [[DataManager alloc] init];
+    self.videos = [dataManager fetchVideosFromDatabase];
+    
+    [self.collectionView reloadData];
+    
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Configure the cell
+    VideoViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"VideoCell" forIndexPath:indexPath];
+    Video *video = [self.videos objectAtIndex:indexPath.item];
     
+    [cell setUpCellWithVideo:video];
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    Video *video = [self.videos objectAtIndex:indexPath.item];
+    if (video) {
+//        NSString* documentsDirectory = [VideoCollectionViewController applicationDocumentsDirectory];
+//        NSString* filePath = [documentsDirectory stringByAppendingString:video.filePath];
+//        NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
+//        NSLog(@"Current URL:%@, pay attention to the APP_ID", fileUrl);
+//        
+//        [self startPlaybackForItemWithURL:fileUrl];
+    }
+    
 }
 
 #pragma mark <UICollectionViewDelegate>

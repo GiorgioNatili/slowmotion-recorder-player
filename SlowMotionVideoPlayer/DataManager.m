@@ -27,7 +27,7 @@
     
     DataUtils *dataUtils = [[DataUtils alloc] init];
     
-    UIImage *image = [dataUtils generateThumbnailIconForVideoFileWith:url WithSize: CGSizeMake(100, 100)];
+    UIImage *image = [dataUtils generateThumbnailIconForVideoFileWith:url WithSize: CGSizeMake(160, 160)];
     video.thumbnail = UIImagePNGRepresentation(image);
     
     [appDelegate saveContext];
