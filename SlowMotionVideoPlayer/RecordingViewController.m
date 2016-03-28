@@ -66,7 +66,8 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
     self.setupResult = AVCamSetupResultSuccess;
     
-    self.videoPreview.playerLayer.player = self.player;
+    // Setup the preview view.
+    self.videoPreview.session = self.session;
     
     switch ( [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo] ) {
         case AVAuthorizationStatusAuthorized: {
