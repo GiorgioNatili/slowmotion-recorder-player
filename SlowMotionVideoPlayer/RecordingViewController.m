@@ -12,6 +12,7 @@
 #import "VideoUtils.h"
 #import "VideoPlayerViewController.h"
 #import "VideoPreviewView.h"
+#import "DataManager.h"
 
 typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
@@ -224,6 +225,9 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
                                              fromConnections:(NSArray *)connections error:(NSError *)error {
     
     self.currentOutputURL = outputFileURL;
+    
+    DataManager *dataManager = [[DataManager alloc] init];
+    [dataManager createVideoWithFileAtURL:outputFileURL withFileName:self.currentFileName];
     
 }
 
