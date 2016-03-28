@@ -19,6 +19,7 @@
 		592544F11CA7086D00C88B75 /* VideoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544F01CA7086D00C88B75 /* VideoUtils.m */; };
 		592544F71CA7602900C88B75 /* VideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592544F61CA7602900C88B75 /* VideoPlayerViewController.m */; };
 		59D679C61CA8601100212115 /* VideoPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679C51CA8601100212115 /* VideoPreviewView.m */; };
+		59D679CD1CA9587400212115 /* DataUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679CC1CA9587400212115 /* DataUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		592544F61CA7602900C88B75 /* VideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerViewController.m; sourceTree = "<group>"; };
 		59D679C41CA8601100212115 /* VideoPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPreviewView.h; sourceTree = "<group>"; };
 		59D679C51CA8601100212115 /* VideoPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPreviewView.m; sourceTree = "<group>"; };
+		59D679CB1CA9587400212115 /* DataUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataUtils.h; sourceTree = "<group>"; };
+		59D679CC1CA9587400212115 /* DataUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				592544F01CA7086D00C88B75 /* VideoUtils.m */,
 				592544F51CA7602900C88B75 /* VideoPlayerViewController.h */,
 				592544F61CA7602900C88B75 /* VideoPlayerViewController.m */,
+				59D679CB1CA9587400212115 /* DataUtils.h */,
+				59D679CC1CA9587400212115 /* DataUtils.m */,
 			);
 			path = SlowMotionVideoPlayer;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				592544F71CA7602900C88B75 /* VideoPlayerViewController.m in Sources */,
+				59D679CD1CA9587400212115 /* DataUtils.m in Sources */,
 				592544EE1CA5D30A00C88B75 /* RecordingViewController.m in Sources */,
 				592544C21CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld in Sources */,
 				592544B91CA5C65000C88B75 /* AppDelegate.m in Sources */,
