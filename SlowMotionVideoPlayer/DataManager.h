@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface DataManager : NSObject
-
+- (void)createVideoWithFileAtURL:(NSURL *)url withFileName:(NSString *)filename;
+- (NSArray *)fetchVideosFromDatabase;
 @end
