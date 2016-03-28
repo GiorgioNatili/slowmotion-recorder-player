@@ -11,27 +11,28 @@
  
 */
 
+@import Foundation;
 @import AVFoundation;
-
 #import "VideoPreviewView.h"
+
 
 @implementation VideoPreviewView
 
-+ (Class)layerClass
-{
-	return [AVCaptureVideoPreviewLayer class];
+- (AVPlayer *)player {
+    return self.playerLayer.player;
 }
 
-- (AVCaptureSession *)session
-{
-	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.layer;
-	return previewLayer.session;
+- (void)setPlayer:(AVPlayer *)player {
+    self.playerLayer.player = player;
 }
 
-- (void)setSession:(AVCaptureSession *)session
-{
-	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.layer;
-	previewLayer.session = session;
+// override UIView
++ (Class)layerClass {
+    return [AVPlayerLayer class];
+}
+
+- (AVPlayerLayer *)playerLayer {
+    return (AVPlayerLayer *)self.layer;
 }
 
 @end

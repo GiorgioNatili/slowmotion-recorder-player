@@ -58,6 +58,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYO-pZ-Zs5" customClass="VideoPreviewView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-2b-jvb">
                                 <rect key="frame" x="276" y="550" width="49" height="30"/>
                                 <state key="normal" title="Record"/>
@@ -77,14 +81,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zu4-dn-oFj" firstAttribute="centerX" secondItem="Kmj-GX-aXr" secondAttribute="centerX" id="FXi-0c-U6Q"/>
+                            <constraint firstItem="PYO-pZ-Zs5" firstAttribute="centerY" secondItem="Kmj-GX-aXr" secondAttribute="centerY" id="JP9-tB-4ru"/>
                             <constraint firstItem="gfM-Mr-lJb" firstAttribute="top" secondItem="Xpy-2b-jvb" secondAttribute="bottom" constant="20" id="TeO-Kt-iOx"/>
+                            <constraint firstItem="PYO-pZ-Zs5" firstAttribute="width" secondItem="Kmj-GX-aXr" secondAttribute="width" id="UM7-cR-SC7"/>
+                            <constraint firstItem="PYO-pZ-Zs5" firstAttribute="centerX" secondItem="Kmj-GX-aXr" secondAttribute="centerX" id="UYJ-J7-ice"/>
                             <constraint firstItem="Xpy-2b-jvb" firstAttribute="centerX" secondItem="Kmj-GX-aXr" secondAttribute="centerX" id="nVu-15-Ba4"/>
                             <constraint firstItem="Xpy-2b-jvb" firstAttribute="top" secondItem="Zu4-dn-oFj" secondAttribute="bottom" constant="8" id="trZ-xl-QkG"/>
+                            <constraint firstItem="PYO-pZ-Zs5" firstAttribute="height" secondItem="Kmj-GX-aXr" secondAttribute="height" id="u0o-z7-1x2"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="frameRate" destination="Zu4-dn-oFj" id="MPd-FN-Jfz"/>
                         <outlet property="record" destination="Xpy-2b-jvb" id="iSE-fm-Ubi"/>
+                        <outlet property="videoPreview" destination="PYO-pZ-Zs5" id="IhC-Ym-jhW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfr-bd-tOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

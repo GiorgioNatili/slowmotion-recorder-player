@@ -11,10 +11,11 @@
 
 @import UIKit;
 
-@class AVCaptureSession;
+@class AVPlayer;
 
 @interface VideoPreviewView : UIView
 
-@property (nonatomic) AVCaptureSession *session;
+@property AVPlayer *player;
+@property (readonly) AVPlayerLayer *playerLayer;
 
 @end

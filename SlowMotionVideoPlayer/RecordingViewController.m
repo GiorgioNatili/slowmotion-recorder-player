@@ -11,6 +11,7 @@
 #import "RecordingViewController.h"
 #import "VideoUtils.h"
 #import "VideoPlayerViewController.h"
+#import "VideoPreviewView.h"
 
 typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
@@ -20,7 +21,9 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
 };
 
-@interface RecordingViewController () <AVCaptureFileOutputRecordingDelegate>
+@interface RecordingViewController () <AVCaptureFileOutputRecordingDelegate> {
+    AVPlayer *_player;
+}
 
 // AV capture and saving members
 @property (nonatomic) dispatch_queue_t sessionQueue;
@@ -37,10 +40,10 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 @property (nonatomic) NSString *currentFileName;
 @property (nonatomic) NSURL *currentOutputURL;
 
-
 // UI items
 @property (weak, nonatomic) IBOutlet UIButton *record;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *frameRate;
+@property (weak, nonatomic) IBOutlet VideoPreviewView *videoPreview;
 
 @end
 
@@ -62,6 +65,8 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     self.sessionQueue = dispatch_queue_create( "session queue", DISPATCH_QUEUE_SERIAL );
     
     self.setupResult = AVCamSetupResultSuccess;
+    
+    self.videoPreview.playerLayer.player = self.player;
     
     switch ( [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo] ) {
         case AVAuthorizationStatusAuthorized: {
@@ -254,6 +259,12 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
 }
 
+- (AVPlayer *)player {
+    if (!_player)
+        _player = [[AVPlayer alloc] init];
+    return _player;
+}
+
 #pragma mark - User Interactions
 - (IBAction)recordVideo:(id)sender {
     
@@ -307,7 +318,6 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     if (buttonIndex == 0) {
-        
         
         NSString * storyboardName = @"Main";
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
