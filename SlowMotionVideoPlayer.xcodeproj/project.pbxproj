@@ -23,6 +23,8 @@
 		59D679D41CA95A5A00212115 /* Video+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679D11CA95A5A00212115 /* Video+CoreDataProperties.m */; };
 		59D679D51CA95A5A00212115 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679D31CA95A5A00212115 /* Video.m */; };
 		59D679D91CA95B0200212115 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679D81CA95B0200212115 /* DataManager.m */; };
+		59D679DC1CA9619600212115 /* VideosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679DB1CA9619600212115 /* VideosCollectionViewController.m */; };
+		59D679DF1CA961D600212115 /* VideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D679DE1CA961D600212115 /* VideoViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,10 @@
 		59D679D31CA95A5A00212115 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		59D679D71CA95B0200212115 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		59D679D81CA95B0200212115 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		59D679DA1CA9619600212115 /* VideosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosCollectionViewController.h; sourceTree = "<group>"; };
+		59D679DB1CA9619600212115 /* VideosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosCollectionViewController.m; sourceTree = "<group>"; };
+		59D679DD1CA961D600212115 /* VideoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoViewCell.h; sourceTree = "<group>"; };
+		59D679DE1CA961D600212115 /* VideoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,8 @@
 		592544B31CA5C65000C88B75 /* SlowMotionVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				59D679DD1CA961D600212115 /* VideoViewCell.h */,
+				59D679DE1CA961D600212115 /* VideoViewCell.m */,
 				59D679D61CA95A6700212115 /* model */,
 				59D679D21CA95A5A00212115 /* Video.h */,
 				59D679D31CA95A5A00212115 /* Video.m */,
@@ -139,6 +147,8 @@
 				592544C01CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld */,
 				592544B41CA5C65000C88B75 /* Supporting Files */,
 				59D679CE1CA9590B00212115 /* utils */,
+				59D679DA1CA9619600212115 /* VideosCollectionViewController.h */,
+				59D679DB1CA9619600212115 /* VideosCollectionViewController.m */,
 			);
 			path = SlowMotionVideoPlayer;
 			sourceTree = "<group>";
@@ -336,11 +346,13 @@
 				59D679CD1CA9587400212115 /* DataUtils.m in Sources */,
 				592544EE1CA5D30A00C88B75 /* RecordingViewController.m in Sources */,
 				59D679D51CA95A5A00212115 /* Video.m in Sources */,
+				59D679DC1CA9619600212115 /* VideosCollectionViewController.m in Sources */,
 				59D679D41CA95A5A00212115 /* Video+CoreDataProperties.m in Sources */,
 				592544C21CA5C65000C88B75 /* SlowMotionVideoPlayer.xcdatamodeld in Sources */,
 				592544B91CA5C65000C88B75 /* AppDelegate.m in Sources */,
 				592544B61CA5C65000C88B75 /* main.m in Sources */,
 				592544F11CA7086D00C88B75 /* VideoUtils.m in Sources */,
+				59D679DF1CA961D600212115 /* VideoViewCell.m in Sources */,
 				59D679D91CA95B0200212115 /* DataManager.m in Sources */,
 				59D679C61CA8601100212115 /* VideoPreviewView.m in Sources */,
 			);

@@ -19,14 +19,29 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mtl-ox-a8k">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mtl-ox-a8k" customClass="VideoViewCell">
+                                <rect key="frame" x="0.0" y="64" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xSu-Rt-lr1">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="xSu-Rt-lr1" firstAttribute="centerX" secondItem="mtl-ox-a8k" secondAttribute="centerX" id="BYQ-L3-uH8"/>
+                                    <constraint firstItem="xSu-Rt-lr1" firstAttribute="centerY" secondItem="mtl-ox-a8k" secondAttribute="centerY" id="WNi-de-8qD"/>
+                                    <constraint firstItem="xSu-Rt-lr1" firstAttribute="width" secondItem="mtl-ox-a8k" secondAttribute="width" id="feP-HS-vVj"/>
+                                    <constraint firstItem="xSu-Rt-lr1" firstAttribute="height" secondItem="mtl-ox-a8k" secondAttribute="height" id="s6a-wK-EHb"/>
+                                </constraints>
+                                <size key="customSize" width="100" height="100"/>
+                                <connections>
+                                    <outlet property="videoThumbnail" destination="xSu-Rt-lr1" id="Zfr-Rb-ZDl"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
