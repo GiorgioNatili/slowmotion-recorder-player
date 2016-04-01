@@ -98,7 +98,13 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
             break;
         }
     }
+    
+    [self configureDevice];
 
+}
+
+- (void) configureDevice {
+    
     // Setup the capture session.
     dispatch_async( self.sessionQueue, ^{
         if ( self.setupResult != AVCamSetupResultSuccess ) {
@@ -185,7 +191,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
         
         [self.session commitConfiguration];
     });
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -250,7 +256,7 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     
     if (selectedIndex == 0) {
         
-        [self.videoUtils switchSession:self.session toDesiredFPS:30.0];
+        [self.videoUtils switchSession:self.session toDesiredFPS:32.0];
         
     } else if (selectedIndex == 1) {
         
@@ -276,11 +282,11 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
     UIButton *button = (UIButton*) sender;
     button.enabled = NO;
     
-    [self handleFPS];
-    
     dispatch_async( self.sessionQueue, ^{
         
         if ( !self.movieFileOutput.isRecording ) {
+            
+            [self handleFPS];
             
             // Update the orientation on the movie file output video connection before starting recording.
             AVCaptureConnection *connection = [self.movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
@@ -295,8 +301,16 @@ typedef NS_ENUM( NSInteger, AVCamSetupResult ) {
             self.currentFileName = [outputFileName stringByAppendingPathExtension:@"mov"];
             
             NSURL *recordingURL = [self.videoUtils localFileURL:self.currentFileName];
+            
+            @try {
+                
+                [self.movieFileOutput startRecordingToOutputFileURL:recordingURL recordingDelegate:self];
+            
+            } @catch (NSException *exception) {
 
-            [self.movieFileOutput startRecordingToOutputFileURL:recordingURL recordingDelegate:self];
+                
+            }
+
             
         } else {
             
